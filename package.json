@@ -1,0 +1,14 @@
+{
+  "name": "informeproductoslaboratorio",
+  "version": "1.0.0",
+  "description": "informeProductosWinfarma",
+  "main": "main.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "CDL",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^37.3.1"
+  }
+}
