@@ -3,12 +3,27 @@
   "version": "1.0.0",
   "description": "informeProductosWinfarma",
   "main": "main.js",
+  "homepage": "./",
   "scripts": {
-    "test": "npm run test"
+    "dev": "electron .",
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "test": "npm run test",
+    "pack": "npm run build:css && electron-packager . --out=dist-package --overwrite",
+    "pack:win": "npm run build:css && electron-packager . --platform=win32 --arch=x64 --out=dist-package --overwrite",
+    "pack:win-portable": "npm run build:css && electron-packager . --platform=win32 --arch=x64 --out=dist-package --overwrite --asar"
   },
   "author": "CDL",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^37.3.1"
+    "autoprefixer": "^10.4.16",
+    "electron": "^37.3.1",
+    "electron-packager": "^17.1.2",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.4.0"
+  },
+  "dependencies": {
+    "node-firebird": "^0.9.9",
+    "xlsx": "^0.18.5"
   }
 }
